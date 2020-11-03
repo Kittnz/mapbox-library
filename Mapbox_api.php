@@ -10,8 +10,8 @@ class Mapbox_api {
 
     //This function return search place lat,long & etc..
     //For an example if you search 'New York' it's return Similar New York results. You just need to pass seach value.
-    public function forward_geocoding($search) {
-        $search = str_replace(' ', '%20', $search);
+    public function forward_geocoding($search_place_text) {
+        $search = str_replace(' ', '%20', $search_place_text);
         $url = $this->forward_geocoding_url;
         $url = str_replace('@@API_KEY@@', $this->api_key, $url);
         $url = str_replace('@@SEARCH@@', $search, $url);
